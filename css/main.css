@@ -102,6 +102,8 @@
 
 .main-header .menu-top .logo {
 	width: 280px;
+	position: relative;
+	top: -10px;
 }
 
 .main-header .menu-top .logo a{
@@ -119,22 +121,19 @@
 .main-header .menu-top .support {
 	height: 40px;
 	border-left: 2px solid #01567d;
-	padding-top: 11px;
-	margin-top: 12px;
+	position: relative;
+	padding-left: 30px;
+
 }
 .main-header .menu-top .support a {
-	font-size: 22px;
-	line-height: 22px;
-	margin-left: 30px;
-	display: block;
-	text-transform: uppercase;
-	color: #01567d;
-	font-weight: 300;
+	position: relative;
+	top: -10px;
 }
 .main-header .menu-top .search {
 	position: relative;
+	top: -10px;
 	width: 242px;
-	margin: 13px 0px 0 100px;
+	margin: 13px 0px 0 40px;
 }
 
 .main-header .menu-top .search input[type="text"] {
@@ -170,6 +169,8 @@
 }
 .main-header .menu-top .client-area {
 	float: right;
+	position: relative;
+	top: -10px
 }
 .main-header .menu-down {
 	background: #01567d;
@@ -348,7 +349,7 @@
 	background-repeat: no-repeat; 
 	position: relative;
 }
-.main-banner .photo-banner, .main-banner .youtube-opening {
+.main-banner .youtube-opening {
 	display: none;
 }
 
@@ -358,31 +359,72 @@
 	float: left;
 }
 
-.main-banner h2 {
+.main-banner .baner-50.single-mid {
+	margin-left: 106px;
+}
+
+.main-banner .baner-33 {
+	width: 50%;
+	display: block;
+	margin: 0 auto;
+}
+
+.main-banner li {
+	position: relative;
+	height: 424px;
+}
+
+.main-banner li h2 {
 	font-size: 45px;
 	line-height: 55px;
 	font-weight: 300;
 	color: #fff;
 	margin-bottom: 55px;
+	position: relative;
+	z-index: 3;
 }
 
-.main-banner h3 {
+.main-banner li h3 {
 	font-size: 29px;
 	line-height: 36px;
 	font-weight: 400;
 	color: #fff;
 	margin-bottom: 50px;
+	position: relative;
+	z-index: 3;
 }
 
-.main-banner a#play-opening, .main-banner a#pause-opening {
+.main-banner li .photo-banner {
+	position: absolute;
+	z-index: 2;
+	width: 100%;
+	height: 424px;
+	left: 0px;
+	top: 0px;
+}
+
+.main-banner .bt-default {
+	position: relative;
+	z-index: 3;
+}
+
+.main-banner a#pause-opening {
 	color: #fff;
+}
+
+.main-banner .controlers>span:first-child {
+	left: -30px;
+}
+
+.main-banner.controlers>span:last-child {	
+	right: -30px;
 }
 .main-banner #opening-banner {
 	position: absolute;
 	top: 0px;
 	left: 0px;
 	border:0px;
-	z-index: 12;
+	z-index: 35;
 }
 
 .main-banner a#pause-opening {
@@ -390,8 +432,13 @@
 	top: 5px;
 	right: 30px;
 	font-size: 45px;
-	z-index: 15;
+	z-index: 36;
 }
+
+.main-banner a#play-opening {
+	display: inline-block;
+}
+
 .main-banner #opening-banner, .main-banner a#pause-opening {
 	display: none;
 }

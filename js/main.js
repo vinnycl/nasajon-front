@@ -1,6 +1,3 @@
-var imagemBanner = $(".main-banner .photo-banner").attr("src");
-$('.main-banner').css('background-image', 'url(' + imagemBanner + ')');
-
 var tamanhoTela = $(".main-banner").width();
 var alturaTela = $(".main-banner").height();
 
@@ -23,7 +20,19 @@ $( "#pause-opening" ).click(function() {
 	player.pauseVideo();
 });
 
-
+$('.bx-banner').bxSlider({
+	slideWidth: 1170,
+	infiniteLoop: false,
+	mode: 'horizontal',
+	captions: false,
+	pager: false,
+	infiniteLoop: false,
+	slideMargin: 0,
+	nextSelector: '.bt-bn-next',
+	prevSelector: '.bt-bn-prev',
+	nextText: '<span class="icon-arrow-right"></span>',
+	prevText: '<span class="icon-arrow-left"></span>'
+});
 
 $('.bx-features').bxSlider({
 	mode: 'horizontal',
