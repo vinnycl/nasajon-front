@@ -1,0 +1,7 @@
+* {margin: 0px; padding: 0px; box-sizing: border-box;}
+*:before, *:after { content: ""; display: table; } 
+*:after {clear: both;}
+body {font: 16px / 1.2 "Lato", sans-serif;}
+a {text-decoration: none; display: inline-block;}
+a img {border:0px;}
+ul {list-style: none;}

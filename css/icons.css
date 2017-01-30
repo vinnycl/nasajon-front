@@ -1,0 +1,26 @@
+@font-face {
+font-family: 'icomoon';font-weight: normal;font-style: normal;
+src: url('../font/icomoon.eot?bctowr');
+src: url('../font/icomoon.eot?bctowr#iefix') format('embedded-opentype'),
+url('../font/icomoon.ttf?bctowr') format('truetype'),
+url('../font/icomoon.woff?bctowr') format('woff'),
+url('../font/icomoon.svg?bctowr#icomoon') format('svg');}
+
+
+[class^="icon-"], [class*=" icon-"] {font-family: 'icomoon' !important; display: inline-block; speak: none;font-style: normal;font-weight: normal;font-variant: normal;text-transform: none;line-height: 1;-webkit-font-smoothing: antialiased;-moz-osx-font-smoothing: grayscale;}
+
+.icon-logo:before {content: "\e900";}
+.icon-arrow-down:before {content: "\e901";}
+.icon-arrow-top:before {content: "\e902";}
+.icon-arrow-left:before {content: "\e903";}
+.icon-arrow-right:before {content: "\e904";}
+.icon-facebook:before {content: "\e905";}
+.icon-linkedin:before {content: "\e906";}
+.icon-wordpress:before {content: "\e907";}
+.icon-youtube:before {content: "\e908";}
+.icon-twitter:before {content: "\e909";}
+.icon-lupa:before {content: "\e90a";}
+.icon-carrinho:before {content: "\e90b";}
+.icon-maleta:before {content: "\e90c";}
+.icon-pessoas:before {content: "\e90d";}
+.icon-solucoes:before {content: "\e90e";}

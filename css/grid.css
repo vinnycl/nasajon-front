@@ -1,0 +1,17 @@
+.container {width: 1230px; padding: 0 15px; margin: 0 auto; clear: both;}
+
+.row { margin: 0; display: block; min-height: 1px; position: relative; }
+.col { float: left; margin: 0 15px; }
+ 
+.one { width: 70px; }
+.two { width: 170px; }
+.three { width: 270px; }
+.four { width: 370px; }
+.five { width: 470px; }
+.six { width: 570px; }
+.seven { width: 670px; }
+.eight { width: 770px; }
+.nine { width: 870px; }
+.ten { width: 970px; }
+.eleven { width: 1070px; }
+.twelve { width: 1170px; }
