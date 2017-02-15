@@ -7,7 +7,7 @@ $(".main-banner #opening-banner").attr("height", alturaTela);
 
 var player;
 function onYouTubePlayerAPIReady() {
-    player = new YT.Player('opening-banner');
+    player = new YT.Player("opening-banner");
 }
 
 $( "#play-opening" ).click(function() {
@@ -20,7 +20,7 @@ $( "#pause-opening" ).click(function() {
 	player.pauseVideo();
 });
 
-$('.bx-banner').bxSlider({
+$(".bx-banner").bxSlider({
 	slideWidth: 1170,
 	infiniteLoop: false,
 	mode: 'horizontal',
@@ -34,7 +34,7 @@ $('.bx-banner').bxSlider({
 	prevText: '<span class="icon-arrow-left"></span>'
 });
 
-$('.bx-features').bxSlider({
+$(".bx-features").bxSlider({
 	mode: 'horizontal',
 	captions: false,
 	pager: false,
@@ -49,7 +49,7 @@ $('.bx-features').bxSlider({
 	prevText: '<span class="icon-arrow-left"></span>'
 });
 
-$('.bx-use').bxSlider({
+$(".bx-use").bxSlider({
 	mode: 'horizontal',
 	captions: false,
 	pager: false,
@@ -64,7 +64,7 @@ $('.bx-use').bxSlider({
 	prevText: '<span class="icon-arrow-left"></span>'
 });
 
-$('#go-top').click(function() {
+$("#go-top").click(function() {
 	if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
 		var target = $(this.hash);target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
 		if (target.length) {
@@ -73,12 +73,39 @@ $('#go-top').click(function() {
 		}
 	}
 });
+$(".map #svg-map path").click(function() {
+	$(".map #svg-map path").removeClass("ativo");
+	$(".map .enderecos ul").hide();
+	$(this).addClass("ativo");
+});
+
+$(".map #svg-map path#norte").click(function() {
+	$(".map .enderecos ul.enderecos-norte").fadeIn();
+});
+
+$(".map #svg-map path#nordeste").click(function() {
+	$(".map .enderecos ul.enderecos-nordeste").fadeIn();
+});
+
+$(".map #svg-map path#sul").click(function() {
+	$(".map .enderecos ul.enderecos-sul").fadeIn();
+});
+
+$(".map #svg-map path#sudeste").click(function() {
+	$(".map .enderecos ul.enderecos-sudeste").fadeIn();
+});
+
+$(".map #svg-map path#centro").click(function() {
+	$(".map .enderecos ul.enderecos-centro").fadeIn();
+});
 
 $(window).scroll(function() {
-	if ($(this).scrollTop() > 230) {
+	if ($(this).scrollTop() > 64) {
 		$("#go-top").fadeIn(400);
+		$("body").addClass("scrolled");
 	}
 	else {
 		$("#go-top").fadeOut(400);
+		$("body").removeClass("scrolled");
 	}
 });
