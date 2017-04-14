@@ -14,8 +14,8 @@
 	right: 60px;
 	text-align: center;
 	color: #005167;
-	padding-top: 20px;
-	font-size: 25px;
+	padding-top: 23px;
+	font-size: 20px;
 	line-height: 20px;
 	display: none;
 }
@@ -23,7 +23,7 @@
 
 .bt-default {
 	display: block;
-	padding: 16px 35px;
+	padding: 20px 20px;
 	text-transform: uppercase;
 	color: #01567d;
 	background: #fff;
@@ -31,8 +31,8 @@
 	border-radius: 10px;
 	text-align: center;
 	font-weight: 300;
-	font-size: 22px;
-	line-height: 22px;
+	font-size: 16px;
+	line-height: 16px;
 	-webkit-transition: all 200ms ease-in-out;
 	-ms-transition: all 200ms ease-in-out;
 	transition: all 200ms ease-in-out;
@@ -40,7 +40,15 @@
 .bt-default:hover {
 	color: #fff;
 	background: #01567d;
-	border: 1px solid #01567d;
+}
+
+.bt-default.yellow {
+	color: #f39a26;
+	border: 1px solid #f39a26;
+}
+.bt-default:hover {
+	color: #fff;
+	background: #f39a26;
 }
 
 .block-titles {
@@ -97,14 +105,91 @@
 	font-weight: 300;
 	color: #fff;
 	text-transform: uppercase;
-	padding: 24.5px 0;
 	text-align: center;
 }
 .main-header .menu-top a {
 	color: #fff;
+	padding: 24.5px 0;
 }
+.main-header .menu-top ul li:first-child {
+	text-align: left;
+}
+
 .main-header .menu-top a:hover {
 	text-decoration: underline;
+}
+
+.main-header .menu-top ul li {
+	position: relative;
+}
+
+.main-header .menu-top ul ul {
+	background: #fff;
+	padding: 0 20px;
+	position: absolute;
+	top: 63px;
+	left: 0px;
+	z-index: 3;
+	border: 1px solid #6c8d9d;
+}
+
+.main-header .menu-top ul ul a:hover {
+	text-decoration: none;
+	font-weight: bold;
+}
+
+.main-header .menu-top ul ul ul {
+	left: 190px;
+	top: -1px;
+}
+
+.main-header .menu-top ul ul li {
+	display: block;
+	width: 170px;
+	border-bottom: 1px solid #c5e8f7;
+	font-weight: initial;
+	text-transform: uppercase;
+}
+.main-header .menu-top ul ul li:first-child {
+	background: url(../img/go-next.png) no-repeat right 50%;
+}
+.main-header .menu-top ul ul ul li:first-child {
+	background: inherit;
+}
+.main-header .menu-top ul ul li:last-child {
+	border-bottom: 1px solid #fff;
+}
+
+.main-header .menu-top ul ul li {
+	position: relative;
+}
+
+.main-header .menu-top ul ul li a {
+	display: block;
+	padding: 11px 6px;
+	text-align: left;
+	color: #6f7172;
+	font-size: 13px;
+	-webkit-transition: all 200ms ease-in-out;
+	-ms-transition: all 200ms ease-in-out;
+	transition: all 200ms ease-in-out;
+}
+
+.main-header .menu-top ul ul {
+	display: none;
+}
+
+
+.main-header .menu-top ul ul ul {
+	display: none;
+}
+
+.main-header .menu-top li.atendimento.ativo>a {
+	text-decoration: underline;
+}
+
+.main-header .menu-top ul ul li.suporte.ativo>a {
+	font-weight: bold;
 }
 
 body.scrolled .main-header {
@@ -524,6 +609,59 @@ body.scrolled .main-header .menu-down {
 	display: none;
 }
 
+.main-banner .controlers>span {
+	width: 28px;
+	height: 28px;
+	margin-top: -14px;
+}
+
+.main-banner .controlers span a {
+	width: 28px;
+	height: 28px;
+	background: url(../img/seta-esq.png) no-repeat 50% 50%;
+	overflow: hidden;
+	color: transparent;
+}
+.main-banner .controlers span a.bx-next {
+	background-image: url(../img/seta-dir.png);
+}
+
+
+.bx-controls {
+	position: absolute;
+	bottom: 20px;
+	z-index: 14;
+	width: 300px;
+	height: 20px;
+	margin-left: -150px;
+	left: 50%;
+}
+
+.bx-controls .bx-pager {
+	text-align: center;
+}
+
+.bx-controls .bx-pager .bx-pager-item {
+	display: inline-block;
+}
+
+.bx-controls .bx-pager .bx-pager-item a {
+	display: block;
+	width: 20px;
+	height: 20px;
+	background: #fff;
+	color: transparent;
+	margin: 0 4px;
+	border-radius: 100px;
+	opacity: 0.4;
+	-webkit-transition: all 200ms ease-in-out;
+	-ms-transition: all 200ms ease-in-out;
+	transition: all 200ms ease-in-out;
+}
+.bx-controls .bx-pager .bx-pager-item a.active {
+	opacity: 1;
+}
+
 .solutions-banner {
 	padding-top: 95px;
 }
@@ -562,6 +700,8 @@ body.scrolled .main-header .menu-down {
 .solutions-banner li:hover span {
 	background: #fff;
 }
+
+
 
 .features a h3 {
 	margin-top: 17px;
@@ -667,6 +807,7 @@ body.scrolled .main-header .menu-down {
 	padding: 30px 0;
 	font-size: 14px;
 	color: #87888a;
+	background: #eee;
 }
 
 .map #svg-map {

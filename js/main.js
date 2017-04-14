@@ -25,13 +25,11 @@ $(".bx-banner").bxSlider({
 	infiniteLoop: false,
 	mode: 'horizontal',
 	captions: false,
-	pager: false,
+	pager: true,
 	infiniteLoop: false,
 	slideMargin: 0,
 	nextSelector: '.bt-bn-next',
-	prevSelector: '.bt-bn-prev',
-	nextText: '<span class="icon-arrow-right"></span>',
-	prevText: '<span class="icon-arrow-left"></span>'
+	prevSelector: '.bt-bn-prev'
 });
 
 $(".bx-features").bxSlider({
@@ -108,4 +106,30 @@ $(window).scroll(function() {
 		$("#go-top").fadeOut(400);
 		$("body").removeClass("scrolled");
 	}
+});
+
+
+$( ".atendimento" ).mouseenter(function() {
+	$(".open-atendimento").show();
+	$(this).addClass("ativo");
+});
+
+$( ".suporte" ).mouseenter(function() {
+	$(".open-suporte").show();
+	$(this).addClass("ativo");
+});
+
+$( ".atendimento" ).mouseleave(function() {
+	$(".open-atendimento").hide();
+	$(this).removeClass("ativo");
+});
+
+$( ".open-suporte" ).mouseleave(function() {
+	$(".open-suporte").hide();
+	$(this).removeClass("ativo");
+});
+
+$(".outter").mouseenter(function() {
+	$(".open-suporte").hide();
+	$( ".suporte" ).removeClass("ativo");
 });
