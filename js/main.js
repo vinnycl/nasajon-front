@@ -62,15 +62,34 @@ $(".bx-use").bxSlider({
 	prevText: '<span class="icon-arrow-left"></span>'
 });
 
-$("#go-top").click(function() {
-	if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-		var target = $(this.hash);target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-		if (target.length) {
-			$('html, body').animate({scrollTop: target.offset().top}, 400);
-			return false;
-		}
-	}
+$( ".atendimento" ).mouseenter(function() {
+	$(".open-atendimento").show();
+	$(this).addClass("ativo");
 });
+
+$( ".suporte" ).mouseenter(function() {
+	$(".open-suporte").show();
+	$(this).addClass("ativo");
+});
+
+$( ".atendimento" ).mouseleave(function() {
+	$(".open-atendimento").hide();
+	$(this).removeClass("ativo");
+});
+
+$( ".open-suporte" ).mouseleave(function() {
+	$(".open-suporte").hide();
+	$(this).removeClass("ativo");
+});
+
+$(".outter").mouseenter(function() {
+	$(".open-suporte").hide();
+	$( ".suporte" ).removeClass("ativo");
+});
+
+
+
+
 $(".map #svg-map path").click(function() {
 	$(".map #svg-map path").removeClass("ativo");
 	$(".map .enderecos ul").hide();
@@ -97,6 +116,16 @@ $(".map #svg-map path#centro").click(function() {
 	$(".map .enderecos ul.enderecos-centro").fadeIn();
 });
 
+$("#go-top").click(function() {
+	if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+		var target = $(this.hash);target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+		if (target.length) {
+			$('html, body').animate({scrollTop: target.offset().top}, 400);
+			return false;
+		}
+	}
+});
+
 $(window).scroll(function() {
 	if ($(this).scrollTop() > 64) {
 		$("#go-top").fadeIn(400);
@@ -109,27 +138,15 @@ $(window).scroll(function() {
 });
 
 
-$( ".atendimento" ).mouseenter(function() {
-	$(".open-atendimento").show();
-	$(this).addClass("ativo");
+// interna 
+
+$(".conteudo-interativo").hide();
+
+$( ".link-interativo" ).click(function(e) {
+	e.preventDefault();
+	$( ".link-interativo" ).removeClass("ativo" )
+	$(".conteudo-interativo").hide("200");
+	$( this ).toggleClass("ativo");
+	$( this ).next().toggle("200");
 });
 
-$( ".suporte" ).mouseenter(function() {
-	$(".open-suporte").show();
-	$(this).addClass("ativo");
-});
-
-$( ".atendimento" ).mouseleave(function() {
-	$(".open-atendimento").hide();
-	$(this).removeClass("ativo");
-});
-
-$( ".open-suporte" ).mouseleave(function() {
-	$(".open-suporte").hide();
-	$(this).removeClass("ativo");
-});
-
-$(".outter").mouseenter(function() {
-	$(".open-suporte").hide();
-	$( ".suporte" ).removeClass("ativo");
-});

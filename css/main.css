@@ -843,6 +843,118 @@ body.scrolled .main-header .menu-down {
 	margin-top: 150px;
 }
 
+.texto-principal {
+	padding-top: 70px;
+	font-size: 20px;
+	line-height: 28px;
+	color: #8b8686;
+}
+
+.texto-principal h2 {
+	font-size: 20px;
+	margin-bottom: 30px;
+}
+
+.texto-principal p {
+	padding-bottom: 30px;
+}
+
+.texto-principal ul {
+	margin-bottom: 30px;
+}
+.texto-principal ul li:before {
+	content: "•";
+	display: inline-block;
+	margin-right: 20px;
+	float: left;
+}
+.texto-principal ul li {
+	display: block;
+	padding: 15px 0;
+}
+.texto-principal ul.conteudo-interativo li{
+	border-bottom: 1px solid #8b8686;
+}
+
+.texto-principal ul.conteudo-interativo li:last-child {
+	border-bottom: 1px solid #fff;
+}
+
+.texto-principal ul li a {
+	color: #8b8686;
+	display: block;
+	
+}
+
+.texto-principal .link-interativo {
+	display: block;
+	font-size: 28px;
+	color: #8b8686;
+	background: #dadada;
+	margin: 33px 0;
+	padding: 20px 0;
+	padding-left: 130px;
+	cursor: pointer;
+	position: relative;
+	-webkit-transition: all 200ms ease-in-out;
+	-ms-transition: all 200ms ease-in-out;
+	transition: all 200ms ease-in-out;
+}
+.texto-principal .link-interativo:before {
+	display: inline-block;
+	content: "+";
+	font-size: 54px;
+	line-height: 54px;
+	color: #fff;
+	background: #004e71;
+	float: left;
+	z-index: 1;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	height: 68px;
+	width: 100px;
+	text-align: center;
+	padding-top: 7px;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.texto-principal .link-interativo.yellow:before {
+	background: #f39a26;
+}
+
+.texto-principal .link-interativo a {
+	display: block;
+	z-index: 2;
+	color: #8b8686;
+	-webkit-transition: all 200ms ease-in-out;
+	-ms-transition: all 200ms ease-in-out;
+	transition: all 200ms ease-in-out;
+}
+
+.texto-principal .link-interativo.ativo {
+	background: #3fa9d9;
+}
+
+.texto-principal .link-interativo.yellow.ativo {
+	background: #ffeb3b;
+}
+
+.texto-principal .link-interativo.yellow.ativo a {
+	color: #f39a26;
+}
+
+.texto-principal .link-interativo.ativo:before {
+	content: "-";
+	padding-top: 4px;
+}
+
+.texto-principal .link-interativo.ativo a {
+	color: #004e71;
+}
+
 /*
 
 */
