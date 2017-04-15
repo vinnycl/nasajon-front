@@ -955,6 +955,123 @@ body.scrolled .main-header .menu-down {
 	color: #004e71;
 }
 
-/*
+/* formulario */
 
-*/
+.formulario {
+	width: 500px;
+	margin: 35px auto;
+	padding: 0 25px ;
+	background: #f1f1f1;
+}
+
+.formulario label{
+	display: none;
+}
+
+.formulario .header-formulario {
+	background: #454647;
+	padding: 35px 0;
+	text-align: center;
+	color: #fff;
+	margin: 0 -25px 9px -25px;
+	display: block;
+	position: relative;
+}
+
+.formulario .header-formulario h2 {
+	font-size: 18px;
+	text-transform: uppercase;
+}
+.formulario .header-formulario h3 {
+	font-weight: normal;
+	font-size: 20px;
+	margin-top: 3px;
+}
+
+.formulario .metade-form {
+	width: 50%;
+	float: left;
+}
+.formulario input, .formulario textarea {
+	width: 100%;
+}
+
+.formulario select {
+	width: 227px;
+}
+.formulario .metade-form input {
+	width: 200px;
+	margin-left: 25px;
+}
+
+.formulario input, .formulario textarea, .formulario select {
+	font: 18px / 18px "Lato", sans-serif;
+	color: #dbdbdb;
+	padding: 12px 9px;
+	border: 2px solid #dbdbdb;
+	margin: 9px 0;
+	outline: none;
+}
+
+.formulario input::placeholder, .formulario textarea::placeholder {
+	color: #dbdbdb;
+}
+
+.formulario input[type="submit"] {
+	background: #f39a26;
+	margin: 9px auto 25px auto;
+	border: 0px none;
+	color: #fff;
+	cursor: pointer;
+	width: 392px;
+	display: block;
+	font-weight: bold;
+}
+
+.formulario.azul .header-formulario, .formulario.branco .header-formulario, .formulario.azul, .formulario.azul input, .formulario.azul textarea, .formulario.azul select {
+	background: #004e71;
+}
+
+.formulario.azul input, .formulario.azul textarea, .formulario.azul select {
+	border-color: #fff;
+}
+.formulario.azul input::placeholder, .formulario.azul textarea::placeholder, .formulario.azul input, .formulario.azul textarea, .formulario.azul select {
+	color: #9ed8f2;
+}
+
+.formulario.branco {
+	background: #fff;
+}
+
+.formulario.branco input, .formulario.branco textarea, .formulario.branco select {
+	background: #e8eeef;
+}
+
+.formulario.branco input, .formulario.branco textarea, .formulario.branco select {
+	border-color: #e8eeef;
+}
+
+.formulario.branco input::placeholder, .formulario.branco textarea::placeholder, .formulario.branco input, .formulario.branco textarea, .formulario.branco select {
+	color: #004e71;
+}
+
+.formulario.branco .header-formulario h3:before, .formulario.azul .header-formulario h3:before {
+	position: absolute;
+	display: block;
+	width: 275px;
+	height: 1px;
+	top: 95px;
+	left: 111px;
+	background: #9ed8f2;
+}
+
+.formulario input[type="submit"] {
+	background: #f39a26;
+	margin: 9px auto 25px auto;
+	border: 0px none;
+	color: #fff;
+	cursor: pointer;
+	width: 392px;
+	display: block;
+	font-weight: bold;
+}
