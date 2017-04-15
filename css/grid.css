@@ -15,3 +15,17 @@
 .ten { width: 970px; }
 .eleven { width: 1070px; }
 .twelve { width: 1170px; }
+
+
+@media screen and (max-width: 960px) {
+	.container {
+		width: 300px;
+		padding: 0 10px;
+	}
+	.one, .two, .three, .four, .five, .six, .seven, .eight, .nine, .ten, .eleven, .twelve  {
+		width: auto;
+	}
+	.col { 
+		float: none; margin: 0 0px; 
+	}
+}
