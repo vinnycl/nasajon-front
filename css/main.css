@@ -596,9 +596,11 @@ body.scrolled .main-header .menu-down {
 .main-banner a#pause-opening {
 	position: absolute;
 	top: 5px;
-	right: 30px;
+	right: 0px;
 	font-size: 45px;
 	z-index: 36;
+	width: 54px;
+	text-align: center;
 }
 
 .main-banner a#play-opening {
@@ -664,6 +666,10 @@ body.scrolled .main-header .menu-down {
 
 .solutions-banner {
 	padding-top: 95px;
+}
+
+.solutions-banner li {
+	text-align: center;
 }
 
 .solutions-banner li a {

@@ -221,8 +221,7 @@ else {
 
 $( ".link-interativo" ).click(function(e) {
 	e.preventDefault();
-	$( ".link-interativo" ).removeClass("ativo" )
-	$(".conteudo-interativo").hide("200");
+
 	$( this ).toggleClass("ativo");
 	$( this ).next().toggle("200");
 });
