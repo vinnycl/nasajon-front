@@ -1,8 +1,13 @@
 var tamanhoTela = $(".main-banner").width();
 var alturaTela = $(".main-banner").height();
 
-$(".main-banner #opening-banner").attr("width", tamanhoTela);
-$(".main-banner #opening-banner").attr("height", alturaTela);
+function closeModal () {
+	$(".backdrop").remove();
+}
+
+function openModal (texto) {
+	$("body").append("<div onclick='closeModal();' class='backdrop'><div class='modal'><div class='modal-body'><a onclick='closeModal();'>×</a><p><iframe id='opening-banner' src='http://www.youtube.com/embed/"+texto+"?rel=0&amp;enablejsapi=1&amp;modestbranding=1&amp;autohide=1&amp;showinfo=0&amp;controls=0'></iframe></p></div></div></div>");
+}
 
 
 var player;
@@ -10,14 +15,8 @@ function onYouTubePlayerAPIReady() {
 	player = new YT.Player("opening-banner");
 }
 
-$( "#play-opening" ).click(function() {
-	$(".main-banner #opening-banner, .main-banner a#pause-opening").fadeIn(400);
-	player.playVideo();
-});
-
-$( "#pause-opening" ).click(function() {
-	$(".main-banner #opening-banner, .main-banner a#pause-opening").fadeOut(400);
-	player.pauseVideo();
+$( "#play-opening" ).click(function() {	
+	openModal ("WNZoIM9fM2o");
 });
 
 
