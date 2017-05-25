@@ -6,7 +6,7 @@ function closeModal () {
 }
 
 function openModal (texto) {
-	$("body").append("<div onclick='closeModal();' class='backdrop'><div class='modal'><div class='modal-body'><a onclick='closeModal();'>×</a><p><iframe id='opening-banner' src='http://www.youtube.com/embed/"+texto+"?rel=0&amp;enablejsapi=1&amp;modestbranding=1&amp;autohide=1&amp;showinfo=0&amp;controls=0'></iframe></p></div></div></div>");
+	$("body").append("<div onclick='closeModal();' class='backdrop'><div class='modal'><div class='modal-body'><a onclick='closeModal();'>×</a><p><iframe id='opening-banner' src='http://www.youtube.com/embed/"+texto+"?autoplay=1'></iframe></p></div></div></div>");
 }
 
 
